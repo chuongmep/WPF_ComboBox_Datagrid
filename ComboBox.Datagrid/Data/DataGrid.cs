@@ -9,29 +9,31 @@ namespace ComboBox.Datagrid.Data
 {
     public class DataGrid : ViewModelBase
     {
-        Document doc;
-        public string SheetName { get; set; }
-        public string SheetNumber { get; set; }
 
-        private bool _isSelected;
-        public bool IsSelected
+        private bool ischecked;
+        public bool Ischecked
         {
-            get => _isSelected;
-            set
-            {
-                _isSelected = value;
-                OnPropertyChanged();
-            }
+            get => ischecked;
+            set { ischecked = value; OnPropertyChanged(); }
         }
 
-        public string Status { get; set; }
-
-        public DataGrid (string sheetName,string sheetNumber,bool isSelected=false)
+        private string revitdata;
+        public  string RevitData
         {
-            //this.Doc = Doc;
-            SheetName = sheetName;
-            SheetNumber = sheetNumber;
-            IsSelected = isSelected;
+            get => revitdata;
+            set { revitdata = value; OnPropertyChanged(); }
+        }
+
+        private string exceldata;
+        public string ExcelData
+        {
+            get => exceldata;
+            set { exceldata = value; OnPropertyChanged(); }
+        }
+
+        public DataGrid(string SheetName, String Sheetnumber)
+        {
+            Ischecked = false;
         }
 
     }

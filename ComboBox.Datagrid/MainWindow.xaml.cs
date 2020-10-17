@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -16,22 +18,20 @@ namespace ComboBox.Datagrid
         {
             DataContext = vm;
             InitializeComponent();
-            List<CalendarItem> items = new List<CalendarItem>()
-            {
-                new CalendarItem("Thu Hai", "Work"),
-                new CalendarItem("XX", "travel"),
-                new CalendarItem("SS", "vacation"),
-                new CalendarItem("WWW", "Fishing")
-            };
-            
-            dataGrid1.ItemsSource = items;
+           
 
-            Days.ItemsSource = DayOfWeek.days;
+            RevitData.ItemsSource = vm.RevitData;
+            ExcelData.ItemsSource = vm.ExcelData;
         }
 
         private void DayChanged(object sender, SelectionChangedEventArgs e)
         {
             var d = (sender as System.Windows.Controls.ComboBox).SelectedItem;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            vm.Items.Add(new DataGrid("SheetName","SheetNumber"));
         }
     }
 
