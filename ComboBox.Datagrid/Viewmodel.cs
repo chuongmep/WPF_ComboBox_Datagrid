@@ -63,8 +63,8 @@ namespace ComboBox.Datagrid
             ExcelData = new List<string>(){"Excel1","Excel02"};
             ObservableCollection<DataGrid> items = new ObservableCollection<DataGrid>()
             {
-                new DataGrid("Data1","Data2"){RevitData = "Sheet Name",ExcelData = "None"},
-                new DataGrid("Data1","Data2"){RevitData = "Sheet Number",ExcelData = "None"},
+                new DataGrid(){RevitData = "Sheet Name",ExcelData = "None"},
+                new DataGrid(){RevitData = "Sheet Number",ExcelData = "None"},
             };
 
             Items = items;
@@ -83,7 +83,7 @@ namespace ComboBox.Datagrid
         {
 
             if (Items == null) Items = new ObservableCollection<DataGrid>();
-            DataGrid Item = new DataGrid("New", "new");
+            DataGrid Item = new DataGrid();
             Items.Add(Item);
 
         }

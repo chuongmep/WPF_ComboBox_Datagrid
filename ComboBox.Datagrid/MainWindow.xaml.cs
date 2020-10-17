@@ -31,7 +31,7 @@ namespace ComboBox.Datagrid
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            vm.Items.Add(new DataGrid("SheetName","SheetNumber"));
+            vm.Items.Add(new DataGrid());
         }
     }
 

@@ -28,7 +28,7 @@
                   AutoGenerateColumns="False" 
                   ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}" >
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn x:Name="textColumn" Header="Check" Width="50" Binding="{Binding Path=IsChecked}" />
+                <DataGridCheckBoxColumn x:Name="textColumn" Header="Check" Width="50" Binding="{Binding Path=Ischecked}" />
                 <DataGridComboBoxColumn x:Name="RevitData" Header="Revit" Width="*" 
                                         SortMemberPath="Name"
                                         ItemsSource="{Binding DataContext.RevitData, RelativeSource={RelativeSource Findancestor, AncestorType={x:Type Window}}}"

@@ -31,7 +31,7 @@ namespace ComboBox.Datagrid.Data
             set { exceldata = value; OnPropertyChanged(); }
         }
 
-        public DataGrid(string SheetName, String Sheetnumber)
+        public DataGrid()
         {
             Ischecked = false;
         }
